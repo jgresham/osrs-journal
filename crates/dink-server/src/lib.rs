@@ -265,7 +265,7 @@ pub async fn start_server_with_options<L: Logger + 'static>(
 
 /// Start the server with default configuration (localhost:3000)
 pub async fn start_default_server() -> Result<(), Box<dyn std::error::Error>> {
-    let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
+    let addr = SocketAddr::from(([0, 0, 0, 0], 3000));
     start_server(addr).await
 }
 
@@ -273,7 +273,7 @@ pub async fn start_default_server() -> Result<(), Box<dyn std::error::Error>> {
 pub async fn start_default_server_with_options<L: Logger + 'static>(
     options: RouterOptions<L>,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
+    let addr = SocketAddr::from(([0, 0, 0, 0], 3000));
     start_server_with_options(addr, options).await
 }
 
