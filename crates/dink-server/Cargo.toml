@@ -1,0 +1,23 @@
+[package]
+name = "dink-server"
+version = "0.1.0"
+edition = "2024"
+authors = ["Johns Gresham <johnsgresham@gmail.com>"]
+license = "MIT"
+description = "Web server using Axum for handling Old School Runescape Dink Plugin notifications"
+repository = "https://github.com/johnsgresham/dink-osrs"
+homepage = "https://github.com/johnsgresham/dink-osrs"
+documentation = "https://github.com/johnsgresham/dink-osrs#readme"
+categories = ["game-development", "web-programming::http-server"]
+keywords = ["osrs", "dink", "plugin", "networking", "runescape", "axum", "api"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+axum = { version = "0.7", features = ["multipart"] }
+tokio = { version = "1.0", features = ["full"] }
+tower = { version = "0.4", features = ["util"] }
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+dink-osrs = { version = "0.1.0", path = "../dink-osrs" }

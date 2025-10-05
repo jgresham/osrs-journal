@@ -1,15 +1,8 @@
-[package]
-name = "dink-osrs"
-version = "0.1.0"
-edition = "2024"
-authors = ["Johns Gresham <johnsgresham@gmail.com>"]
-license = "MIT"
-description = "Library for the Old School Runescape Dink Plugin"
-repository = "https://github.com/johnsgresham/dink-osrs"
-homepage = "https://github.com/johnsgresham/dink-osrs"
-documentation = "https://github.com/johnsgresham/dink-osrs#readme"
-categories = ["game-development"]
-keywords = ["osrs", "dink", "plugin", "networking", "runescape"]
+# <- Add new crate here
+[workspace]
+members = [
+    "crates/dink-osrs",    
+    "crates/dink-server",
+    "crates/api",
+]
 
-[dependencies]
-serde = { version = "1.0", features = ["derive"] }

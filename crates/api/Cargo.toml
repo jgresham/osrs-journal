@@ -1,0 +1,21 @@
+[package]
+name = "api"
+version = "0.1.0"
+edition = "2024"
+authors = ["Johns Gresham <johnsgresham@gmail.com>"]
+license = "MIT"
+description = "API server for handling Dink Plugin notifications"
+repository = "https://github.com/johnsgresham/dink-osrs"
+homepage = "https://github.com/johnsgresham/dink-osrs"
+documentation = "https://github.com/johnsgresham/dink-osrs#readme"
+categories = ["game-development", "web-programming::http-server"]
+keywords = ["osrs", "dink", "plugin", "networking", "runescape", "api"]
+
+[[bin]]
+name = "api"
+path = "src/main.rs"
+
+[dependencies]
+dink-server = { version = "0.1.0", path = "../dink-server" }
+tokio = { version = "1.0", features = ["full"] }
+tracing-subscriber = "0.3"
