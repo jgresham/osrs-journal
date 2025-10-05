@@ -1,8 +1,6 @@
-# <- Add new crate here
 [workspace]
 members = [
     "crates/dink-osrs",    
     "crates/dink-server",
     "crates/api",
 ]
-

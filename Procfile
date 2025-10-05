@@ -1,1 +1,1 @@
-web: cargo run -p api --release
+web: cargo run --bin api --release
